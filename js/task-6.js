@@ -1,10 +1,10 @@
 document.getElementById("validation-input").onblur = function () {
-  console.log('Количество символов: ',this.value.length);
-  if (this.getAttribute('data-length') > this.value.length) { 
-    this.classList.remove('valid');
-    this.classList.add('invalid');
+  console.log('Количество символов: ', event.target.value.length);
+  if (event.target.getAttribute('data-length') > event.target.value.length) { 
+    event.target.classList.remove('valid');
+    event.target.classList.add('invalid');
   } else {
-    this.classList.remove('invalid');
-    this.classList.add('valid');
+    event.target.classList.remove('invalid');
+    event.target.classList.add('valid');
   }
 };
